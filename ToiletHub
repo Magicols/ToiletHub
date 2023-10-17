@@ -3,7 +3,7 @@ wait(1)
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Toilet Tower Defense🚽",
+   Name = "ToiletHub🚽",
    LoadingTitle = "Toilet Hub",
    LoadingSubtitle = "by Magicols & Brizzy",
    ConfigurationSaving = {
