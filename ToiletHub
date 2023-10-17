@@ -3,7 +3,7 @@ wait(1)
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "ToiletHub🚽",
+   Name = "Toilet Tower Defense🚽",
    LoadingTitle = "Toilet Hub",
    LoadingSubtitle = "by Magicols & Brizzy",
    ConfigurationSaving = {
@@ -12,19 +12,19 @@ local Window = Rayfield:CreateWindow({
       FileName = "ToiletHub"
    },
    Discord = {
-      Enabled = false,
-      Invite = "noinvitelink",
+      Enabled = true,
+      Invite = "AeXRdcRr",
       RememberJoins = true
    },
-   KeySystem = false,
+   KeySystem = true,
    KeySettings = {
-      Title = "Toilet Hub/Key",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided",
-      FileName = "Key",
+      Title = "ToiletHub | Key",
+      Subtitle = "Key in Discord server",
+      Note = "discord server on join",
+      FileName = "besttoilettowerdefensescript",
       SaveKey = true,
       GrabKeyFromSite = false,
-      Key = {"Hello"}
+      Key = {"besttoilettowerdefensescript"}
    }
 })
 
