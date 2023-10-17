@@ -8,7 +8,7 @@ local Window = Rayfield:CreateWindow({
    LoadingSubtitle = "by Magicols & Brizzy",
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = ToiletHubs,
+      FolderName = nil,
       FileName = "ToiletHub"
    },
    Discord = {
