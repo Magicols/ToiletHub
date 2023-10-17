@@ -1,4 +1,4 @@
-wait(1)
+wait(0.2)
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
