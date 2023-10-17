@@ -92,7 +92,7 @@ local Toggle = MainTab:CreateToggle({
    Callback = function(Value)
    print("AntiLag on")
    while task.wait() do
-    wait(25)
+    wait(20)
     repeat task.wait() until game.StarterGui.Match.TopFrame.WaveNumber.Visible do
     task.wait(1)
     workspace.Attackers:Destroy()
@@ -108,7 +108,7 @@ local Toggle = MainTab:CreateToggle({
    Callback = function(Value)
    print("AutoLobby on")
    while task.wait() do
-    wait(25)
+    wait(20)
     repeat task.wait() until game:GetService("Players").LocalPlayer.PlayerGui.Match.MatchFinishFrame.Visible
     task.wait(0.2)
     local asdf = require(game.Players.LocalPlayer.PlayerScripts.ChatScript.ChatMain)
