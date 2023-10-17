@@ -34,53 +34,53 @@ local Toggle = MainTab:CreateToggle({
    Flag = "Toggle1",
    Callback = function(Value)
    print("on")
-   -- autofarm
-wait(0.5)
+    -- autofarm
+    wait(0.5)
 
-repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+    repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer:FindFirstChild("PlayerGui")
 
-if game.PlaceId == 13775256536 then
-    while wait(3) do
-        for i, v in next, workspace.Lifts:GetChildren() do
-            if v.Name == "ToiletHQ" then
-                if math.random(1,5) == 3 and v.Base.StatusGui.PlayersCount.Text == "0/5" then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Base.CFrame
+    if game.PlaceId == 13775256536 then
+        while wait(3) do
+            for i, v in next, workspace.Lifts:GetChildren() do
+                if v.Name == "ToiletHQ" then
+                    if math.random(1,5) == 3 and v.Base.StatusGui.PlayersCount.Text == "0/5" then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Base.CFrame
 
-                    repeat task.wait() until game.Players.LocalPlayer.PlayerGui.Lobby.QueueFrame.Visible
+                        repeat task.wait() until game.Players.LocalPlayer.PlayerGui.Lobby.QueueFrame.Visible
 
-                    local StartButton = game.Players.LocalPlayer.PlayerGui.Lobby.QueueFrame.Start
+                        local StartButton = game.Players.LocalPlayer.PlayerGui.Lobby.QueueFrame.Start
 
-                    firesignal(StartButton.Activated)
+                        firesignal(StartButton.Activated)
 
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -100, 0)
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -100, 0)
 
-                    break
+                        break
+                    end
                 end
             end
+
+            task.wait()
+        end
+    else
+        wait(1)
+
+        if not game.Players.LocalPlayer.PlayerGui:FindFirstChild("VotingFrame") then
+            return game.Players.LocalPlayer:Kick("Invalid game.")
         end
 
-        task.wait()
+        repeat task.wait() until game.Players.LocalPlayer.PlayerGui.VotingFrame.VoteFrame.VoteMainFrame.Visible
+
+        wait(1)
+
+        firesignal(game.Players.LocalPlayer.PlayerGui.VotingFrame.VoteFrame.VoteMainFrame.MainFrame.Nightmare.Vote.Vote.Activated)
+
+        while task.wait() do
+            repeat task.wait() until game.Players.LocalPlayer.PlayerGui.Match.TopFrame.SkipWave.Visible
+
+            firesignal(game.Players.LocalPlayer.PlayerGui.Match.TopFrame.SkipWave.Activated)
+        end
     end
-else
-    wait(1)
-
-    if not game.Players.LocalPlayer.PlayerGui:FindFirstChild("VotingFrame") then
-        return game.Players.LocalPlayer:Kick("Invalid game.")
-    end
-
-    repeat task.wait() until game.Players.LocalPlayer.PlayerGui.VotingFrame.VoteFrame.VoteMainFrame.Visible
-
-    wait(1)
-
-    firesignal(game.Players.LocalPlayer.PlayerGui.VotingFrame.VoteFrame.VoteMainFrame.MainFrame.Nightmare.Vote.Vote.Activated)
-
-    while task.wait() do
-    repeat task.wait() until game.Players.LocalPlayer.PlayerGui.Match.TopFrame.SkipWave.Visible
-
-    firesignal(game.Players.LocalPlayer.PlayerGui.Match.TopFrame.SkipWave.Activated)
-    end
-end
-   end,
+    end,
 })
 
 local Toggle = MainTab:CreateToggle({
