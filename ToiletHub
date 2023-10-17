@@ -33,7 +33,7 @@ local Toggle = MainTab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle1",
    Callback = function(Value)
-   print("on")
+   print("AutoFarm on")
     -- autofarm
     wait(0.5)
 
