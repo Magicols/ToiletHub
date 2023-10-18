@@ -32,9 +32,10 @@ local MainTab = Window:CreateTab("AutoFarm", nil)
 
 local Toggle = MainTab:CreateToggle({
    Name = "CoinFarm",
-   CurrentValue = true,
+   CurrentValue = false,
    Flag = "Toggle1",
    Callback = function(Value)
+   Toggle:Set(true)
    print("AutoFarm on")
     -- autofarm
     wait(0.5)
@@ -103,9 +104,10 @@ end
 
 local Toggle = MainTab:CreateToggle({
    Name = "AutoLobby",
-   CurrentValue = true,
+   CurrentValue = false,
    Flag = "Toggle3",
    Callback = function(Value)
+   Toggle:Set(true)
    print("AutoLobby on")
    while task.wait() do
     wait(25)
