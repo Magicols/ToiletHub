@@ -32,7 +32,7 @@ local MainTab = Window:CreateTab("AutoFarm", nil)
 
 local Toggle = MainTab:CreateToggle({
    Name = "CoinFarm",
-   CurrentValue = false,
+   CurrentValue = true,
    Flag = "Toggle1",
    Callback = function(Value)
    print("AutoFarm on")
@@ -103,7 +103,7 @@ end
 
 local Toggle = MainTab:CreateToggle({
    Name = "AutoLobby",
-   CurrentValue = false,
+   CurrentValue = true,
    Flag = "Toggle3",
    Callback = function(Value)
    print("AutoLobby on")
