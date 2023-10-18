@@ -110,6 +110,5 @@ local Toggle = MainTab:CreateToggle({
     task.wait(0.2)
     local asdf = require(game.Players.LocalPlayer.PlayerScripts.ChatScript.ChatMain)
     asdf.MessagePosted:fire("/lobby")
-end
-   end,
+    end 
 })
