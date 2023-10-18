@@ -35,7 +35,7 @@ local Toggle = MainTab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle1",
    Callback = function(Value)
-   Toggle:Set(true)
+   Toggle:Set(false)
    print("AutoFarm on")
     -- autofarm
     wait(0.5)
@@ -107,7 +107,7 @@ local Toggle = MainTab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle3",
    Callback = function(Value)
-   Toggle:Set(true)
+   Toggle:Set(false)
    print("AutoLobby on")
    while task.wait() do
     wait(25)
