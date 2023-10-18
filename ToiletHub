@@ -35,8 +35,6 @@ local Toggle = MainTab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle1",
    Callback = function(Value)
-   Toggle:Set(false)
-   print("AutoFarm on")
     -- autofarm
     wait(0.5)
 
@@ -91,7 +89,6 @@ local Toggle = MainTab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle2",
    Callback = function(Value)
-   print("AntiLag on")
    while task.wait() do
     wait(25)
     repeat task.wait() until game.StarterGui.Match.TopFrame.WaveNumber.Visible do
@@ -107,9 +104,7 @@ local Toggle = MainTab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle3",
    Callback = function(Value)
-   Toggle:Set(false)
    print("AutoLobby on")
-   while task.wait() do
     wait(25)
     repeat task.wait() until game:GetService("Players").LocalPlayer.PlayerGui.Match.MatchFinishFrame.Visible
     task.wait(0.2)
